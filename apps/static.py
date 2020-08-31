@@ -11,7 +11,7 @@ from eat.io import hops, util
 
 #------------------------------------------------------------------------------
 # TODO: load both HOPS and AIPS data into Pandas DataFrames
-df = hops.read_alist("er1/hops-lo/5.+close/data/alist.v6")
+df = hops.read_alist("alist.v6")
 
 # TODO: df['ampdiff'] = hops_amp - aips_amp
 df['ampdiff'] = df['snr']
