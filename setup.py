@@ -43,5 +43,5 @@ setup(
     ],
 
     packages         = ["interview"],
-    install_requires = ["pandas", "bokeh"],
+    install_requires = ["pandas", "bokeh",'eat'],
 )

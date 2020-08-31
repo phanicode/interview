@@ -30,6 +30,7 @@ class Bundle(ABC):
     def __enter__():
         return self
     def __exit__(self, exception_type, exception_val, trace):
+        print('Check debug info')
         self.close()
 
     # Bundle may conform to the iterator protocal
