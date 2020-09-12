@@ -224,7 +224,7 @@ def update():
         df1    = df
         active = active[1:]
     else:
-        # no auto-correlation
+        # no  auto-correlation
         df1    = df[df.site1 != df.site2]
 
     if len(active) == 0:

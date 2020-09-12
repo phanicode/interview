@@ -16,25 +16,5 @@
 # You should have received a copy of the GNU General Public License
 # along with interview.  If not, see <http://www.gnu.org/licenses/>.
 
-from abc import ABC, abstractmethod
-
-class Bundle(ABC):
-    """
-    An abstract class to be implemented by data bundle loaders
-    """
-    @abstractmethod
-    def close(self): # must be implemented by subclasses
-        pass
-
-    # Bundle is a context manager so it can be used with the `with` statement
-    def __enter__():
-        return self
-    def __exit__(self, exception_type, exception_val, trace):
-        print('Check debug info')
-        self.close()
-
-    # Bundle may conform to the iterator protocal
-    def __iter__(self):
-        return self
-    def __next__(self):
-        raise NotImplementedError
+from . import io
+from . import widget
