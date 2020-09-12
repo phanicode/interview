@@ -24,7 +24,7 @@ from eat.io import hops, util
 if len(sys.argv) > 1:
     files = sys.argv[1:]
 else:
-    files = ["er1/hops-lo/5.+close/data/alist.v6"]
+    files = ["alist.v6"]
 
 print('Inspecting file{} "{}"'.format('s' if len(files) > 1 else '', files))
 
@@ -112,7 +112,7 @@ select_x = iw.Select(plt, 'x', opts_time)
 select_y = iw.Select(plt, 'y', opts_all)
 
 # Layout widgets;
-inputs     = bl.widgetbox(select_x, select_y, sizing_mode="fixed")
+inputs     = bl.Column(select_x, select_y, sizing_mode="fixed", width=400, height=400)
 timeseries = bl.column(fig, inputs)
 
 #------------------------------------------------------------------------------
@@ -130,7 +130,7 @@ select_x = iw.Select(plt, 'x', opts_all)
 select_y = iw.Select(plt, 'y', opts_all)
 
 # Layout widgets;
-inputs  = bl.widgetbox(select_x, select_y, sizing_mode="fixed")
+inputs  = bl.Column(select_x, select_y, sizing_mode="fixed", width=400, height=400)
 scatter = bl.row(inputs, fig)
 
 #------------------------------------------------------------------------------
@@ -157,7 +157,7 @@ select_x2  = iw.Select(plt2, 'x', opts_all)
 select_y12 = iw.Select([plt1, plt2], 'y', opts_all)
 
 # Layout widgets;
-inputs  = bl.widgetbox(select_x1, select_x2, select_y12, sizing_mode="fixed")
+inputs  = bl.Column(select_x1, select_x2, select_y12, sizing_mode="fixed", width=400, height=400)
 hlinked = bl.row(inputs, bl.gridplot([[fig1, fig2]]))
 
 #------------------------------------------------------------------------------
@@ -184,7 +184,7 @@ select_y1  = iw.Select(plt1, 'y', opts_all)
 select_y2  = iw.Select(plt2, 'y', opts_all)
 
 # Layout widgets;
-inputs  = bl.widgetbox(select_x12, select_y1, select_y2, sizing_mode="fixed")
+inputs  = bl.Column(select_x12, select_y1, select_y2, sizing_mode="fixed", width=400, height=400)
 vlinked = bl.row(inputs, bl.gridplot([[fig1], [fig2]]))
 
 #------------------------------------------------------------------------------
@@ -245,7 +245,7 @@ colored_by.on_change("active", lambda attr, old, new: update())
 update() # update once to populate the bokeh column data source
 
 # Add everything to the root
-all = bl.column(bl.widgetbox(global_cb, colored_by),
+all = bl.column(bl.Column(global_cb, colored_by),
                 iw.Tabs({"Time Series":           timeseries,
                          "Scatter Plot":          scatter,
                          "Horizontal Linked View":hlinked,
@@ -254,3 +254,17 @@ all = bl.column(bl.widgetbox(global_cb, colored_by),
 
 bp.curdoc().add_root(all)
 bp.curdoc().title = "Demo"
+
+
+# TODO: Learn functionality of tabs
+# TODO: Understand most of the pandas/numpy code
+# TODO: Get the code running under a csv file wrapper
+# TODO: Go through the email containing the pdf of visibiltiy 
+# TODO: and image domains
+# TODO: Understand relationship between the 
+#  old and new files and get it working
+
+# TODO: Make everything into functional programming
+# TODO  https://discourse.bokeh.org/
+# TODO: Learn how eat processes eat files
+
