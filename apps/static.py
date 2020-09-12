@@ -16,6 +16,8 @@ df = hops.read_alist("alist.v6")
 # TODO: df['ampdiff'] = hops_amp - aips_amp
 df['ampdiff'] = df['snr']
 
+print(df.head())
+
 # Add other useful columns
 util.add_path(df)
 
