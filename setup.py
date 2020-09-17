@@ -1,4 +1,4 @@
-# Copyright (C) 2017 Chi-kwan Chan
+# Copyright (C) 2017 Chi-kwan Chan, Phani Velicheti
 # Copyright (C) 2017 Harvard-Smithsonian Center for Astrophysics
 #
 # This file is part of interview.
@@ -28,10 +28,10 @@ setup(
     description      = "Interview: an interactive data viewing and inspecting framework",
     long_description = "Interview is an interactive data viewing and inspecting framework for the Event Horizon Telescope.",
 
-    author       = "Chi-kwan Chan",
-    author_email = "ckchan@cfa.harvard.edu",
+    author       = "Chi-kwan Chan, Phani Velicheti",
+    author_email = "ckchan@cfa.harvard.edu"."phaniv@email.arizona.edu",
     license      = "GPLv3+",
-    url          = "https://github.com/chanchikwan/interview",
+    url          = "https://github.com/phanicode/interview",
     classifiers  = [
         "Development Status :: 1 - Planning",
         "Intended Audience :: Science/Research",

@@ -32,6 +32,7 @@ print('Inspecting file{} "{}"'.format('s' if len(files) > 1 else '', files))
 # Read an alist file; rename columns; add new columns
 df = hops.read_alist(files[0])
 
+
 df['r']     = np.sqrt(df.u**2 + df.v**2)
 df['site1'] = df.baseline.str[0]
 df['site2'] = df.baseline.str[1]
@@ -43,7 +44,6 @@ util.add_gmst(df)
 # Create empty Bokeh column data source with column names matching the
 # pandas data frmae
 
-print(list(df.columns.values.tolist()) )
 src = bm.ColumnDataSource(data={k:[] for k in df.columns})
 
 # Map pandas column names to selection box options;
@@ -78,6 +78,7 @@ opts_all = {
     "mbdelay"      : "Multi-Band Delay",
     "total_mbdelay": "Total Multi-Band Delay",
     "ambiguity"    : "Ambiguity",
+ # TODO : Comvert dictionary into a YAML file
 
     # Unused columns:
     # "baseline", "datatype", "dec_deg", "duration", "epoch", "esdesp",

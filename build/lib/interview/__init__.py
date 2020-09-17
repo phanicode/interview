@@ -1,4 +1,4 @@
-# Copyright (C) 2017 Chi-kwan Chan
+# Copyright (C) 2017 Chi-kwan Chan, Phani Velicheti
 # Copyright (C) 2017 Harvard-Smithsonian Center for Astrophysics
 #
 # This file is part of interview.
