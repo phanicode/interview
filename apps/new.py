@@ -76,7 +76,7 @@ fig2 = bp.figure(title="r vs Y",
     ,x_axis_label="r",y_axis_label= "Y value",
     toolbar_location="right", tools=[hover,
     "pan,box_zoom,box_select,lasso_select,undo,redo,reset,save"],
-    output_backend="webgl")
+    output_backend="webgl",y_axis_type="log")
     
 fig3 = bp.figure(title="Time Series",
     plot_height=1600, plot_width=1600
