@@ -29,7 +29,7 @@ setup(
     long_description = "Interview is an interactive data viewing and inspecting framework for the Event Horizon Telescope.",
 
     author       = "Phani Datta Velicheti,Chi-kwan Chan",
-    author_email = "[phaniv@email.arizona.edu","ckchan@cfa.harvard.edu"],
+    author_email = ["ckchan@cfa.harvard.edu"],
     license      = "GPLv3+",
     url          = "https://github.com/phanicode/interview,https://github.com/rndsrc/interview",
     classifiers  = [,
